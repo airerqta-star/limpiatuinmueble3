@@ -7,13 +7,13 @@
     
     <!-- ============================================================= -->
     <!-- ETIQUETAS OPEN GRAPH (PARA COMPARTIR EN WHATSAPP/REDES) -->
-    <!-- Se actualiza con la nueva imagen (usamos la primera foto como miniatura) -->
+    <!-- Se actualiza con la nueva imagen (usamos la miniatura específica) -->
     <!-- ============================================================= -->
     <meta property="og:title" content="RELEVAMIENTO FOTOGRÁFICO">
     <meta property="og:description" content="Detalles del expediente 1853/2025: Fanto Alejandra s/ inmueble falto de Higiene">
     
-    <!-- URL DE IMAGEN ACTUALIZADA (Usando la primera foto como placeholder) -->
-    <meta property="og:image" content="https://raw.githubusercontent.com/airerqta-star/limpiatuinmueble3/e4ba1312afa2d9c006f0581f7f67bc2860f92b87/01fantovistaprincipalv1.jpeg"> 
+    <!-- URL DE IMAGEN ACTUALIZADA (Usando la miniatura PLANTILLAMINIATURA2.jpg) -->
+    <meta property="og:image" content="https://raw.githubusercontent.com/airerqta-star/limpiatuinmueble3/e8fe272b2f7322669b36f079b17722684d4c1aed/PLANTILLAMINIATURA2.jpg"> 
     
     <meta property="og:url" content=""> 
     <meta property="og:type" content="website">
@@ -82,15 +82,19 @@
     -->
     <script>
         // URL base para el contenido RAW de GitHub (usado solo para fotos)
+        // Se actualiza el commit SHA para reflejar el nuevo enlace de la miniatura
         const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/airerqta-star/limpiatuinmueble3/e4ba1312afa2d9c006f0581f7f67bc2860f92b87/";
+        // Base para la miniatura
+        const MINIAMTURA_RAW_URL = "https://raw.githubusercontent.com/airerqta-star/limpiatuinmueble3/e8fe272b2f7322669b36f079b17722684d4c1aed/PLANTILLAMINIATURA2.jpg";
+        
         const currentCaseData = {
             title: "Fanto Alejandra s/ inmueble falto de higiene",
             expedient: "1853/2025",
             address: "Alvear N° 1375",
             date: "17/10/2025", // Asumiendo una fecha cercana a la del expediente
             
-            // ATENCIÓN: Esta URL es la que se usará para la miniatura (usando la primera foto raw)
-            ogImageUrl: GITHUB_RAW_BASE + "PLANTILLAMINIATURA2.jpg", 
+            // ATENCIÓN: Esta URL es la que se usará para la miniatura (ACTUALIZADA)
+            ogImageUrl: MINIAMTURA_RAW_URL, 
             
             // Dimensiones de la imagen para la previsualización (Open Graph)
             ogImageWidth: "1200",
@@ -136,14 +140,16 @@
                 },
             ],
 
-            // Lista de URLs de PDF (Ahora apuntando a Google Drive en formato /preview para incrustar)
+            // Lista de URLs de PDF (Apuntando a Google Drive en formato /preview)
             pdfs: [
                 { 
-                    url: "https://drive.google.com/file/d/1xJM2J3QbvnJP-v9R7bzMUvhhGb62lBq3/preview", 
+                    // Edicto E-1853-2025-1 (Google Drive /preview)
+                    url: "https://drive.google.com/file/d/1SZXMqLzStU3fcynJxIEO8ib-XAo9kruv/preview", 
                     tabTitle: "EDICTO E-1853-2025-1" 
                 },
                 { 
-                    url: "https://drive.google.com/file/d/19CUSI2CljW6P7vwV_HgbHAPjfmg8RERM/view?usp=sharing", 
+                    // Disposición D-1853-2025-1 (Google Drive /preview)
+                    url: "https://drive.google.com/file/d/1y_zfzXN_St_Udw8v9fLTJpMBZF0UALy3/preview", 
                     tabTitle: "DISPOSICIÓN D-1853-2025-1" 
                 }
             ]
@@ -382,4 +388,6 @@
 
 </body>
 </html>
+
+
 
